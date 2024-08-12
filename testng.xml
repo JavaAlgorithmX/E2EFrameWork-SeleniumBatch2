@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="org.madhav.listners.TestListner"/>
+        <listener class-name="org.madhav.listners.ExtentReportListener"/>
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="C:/Users/maste/Downloads/QA Engineer/E2EFrameworkBatch2">
+
+        <classes>
+<!--            <class name="org.madhav.tests.LoginTest"/>-->
+            <class name="org.madhav.tests.E2ETests"/>
+<!--            <class name="org.madhav.tests.LoginTest"/>-->
+<!--            <class name="org.madhav.tests.ProductsTest"/>-->
+        </classes>
+    </test>
+</suite>
