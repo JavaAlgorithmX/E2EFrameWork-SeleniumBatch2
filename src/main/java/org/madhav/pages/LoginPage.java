@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
     private WebDriver driver;
-
+    //Changes to Madhav's branch
     private static final Logger logger = LogManager.getLogger(LoginPage.class);
 
     public LoginPage(WebDriver driver){
