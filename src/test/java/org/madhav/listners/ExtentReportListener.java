@@ -4,6 +4,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.madhav.tests.Base;
+import org.madhav.utils.PropertiesLoader;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -33,11 +34,16 @@ public class ExtentReportListener extends Base implements ITestListener {
         extentReports = new ExtentReports();
         extentReports.attachReporter(spark);
 
+        String browser = PropertiesLoader.getValue("browser");
+        String environment = PropertiesLoader.getValue("environment");
+        String qaName = PropertiesLoader.getValue("qa-name");
+        String os = PropertiesLoader.getValue("OS");
+
         // Add system-wide or custom information
-        extentReports.setSystemInfo("Tester", "Madhav");
-        extentReports.setSystemInfo("Environment", "QA");
-        extentReports.setSystemInfo("Browser", "Chrome");
-        extentReports.setSystemInfo("OS","Windows");
+        extentReports.setSystemInfo("Tester", qaName);
+        extentReports.setSystemInfo("Environment", environment);
+        extentReports.setSystemInfo("Browser", browser);
+        extentReports.setSystemInfo("OS",os);
     }
 
     @Override

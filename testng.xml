@@ -11,9 +11,9 @@
 
         <classes>
 <!--            <class name="org.madhav.tests.LoginTest"/>-->
-            <class name="org.madhav.tests.E2ETests"/>
-<!--            <class name="org.madhav.tests.LoginTest"/>-->
-          <class name="org.madhav.tests.ProductsTest"/>
+<!--                <class name="org.madhav.tests.E2ETests"/>-->
+            <class name="org.madhav.tests.ProductsTest"/>
+            <class name="org.madhav.tests.LoginTest"/>
         </classes>
     </test>
 </suite>

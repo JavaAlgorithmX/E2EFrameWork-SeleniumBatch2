@@ -22,13 +22,16 @@ public class Base {
     @BeforeSuite
     public void setUp(){
         String browser = PropertiesLoader.getValue("browser");
-        System.out.println("Browser from config file -> "+browser);
+        String url = PropertiesLoader.getValue("url");
+        //System.out.println("Browser from config file -> "+browser);
         //driver = new ChromeDriver();
-        driver = WebDriverFactory.getWebDriver();
+        driver = WebDriverFactory.getWebDriver(browser);
         //Web Driver waits
+        assert driver != null;
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         //window
-        driver.get("https://www.saucedemo.com/");
+        driver.manage().window().maximize();
+        driver.get(url);
         ExtentReportListener.setDriver(driver);
     }
 
